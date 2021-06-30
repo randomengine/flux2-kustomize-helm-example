@@ -11,6 +11,9 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./apps/staging
+  postBuild:
+    substitute:
+      cluster_env: "staging"
   prune: true
   validation: client
   healthChecks:
